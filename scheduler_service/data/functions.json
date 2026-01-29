@@ -1,0 +1,8 @@
+{
+  "d61b63b6-705b-4f7b-8b8b-3560283fa03c": {
+    "id": "d61b63b6-705b-4f7b-8b8b-3560283fa03c",
+    "name": "sumAndGreet",
+    "language": "go",
+    "code": "cGFja2FnZSBtYWluCgppbXBvcnQgImZtdCIKCmZ1bmMgSGFuZGxlcihpbnB1dCBtYXBbc3RyaW5nXWludGVyZmFjZXt9KSBtYXBbc3RyaW5nXWludGVyZmFjZXt9IHsKICAgIG5hbWUgOj0gaW5wdXRbIm5hbWUiXS4oc3RyaW5nKQogICAgYSA6PSBpbnQoaW5wdXRbImEiXS4oZmxvYXQ2NCkpCiAgICBiIDo9IGludChpbnB1dFsiYiJdLihmbG9hdDY0KSkKCiAgICByZXR1cm4gbWFwW3N0cmluZ11pbnRlcmZhY2V7fXsKICAgICAgICAibWVzc2FnZSI6IGZtdC5TcHJpbnRmKCJIZWxsbyAlcyIsIG5hbWUpLAogICAgICAgICJzdW0iOiBhICsgYiwKICAgIH0KfQ=="
+  }
+}

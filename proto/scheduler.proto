@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package scheduler;
+
+import "common.proto";
+
+option go_package = "taskforge/proto/scheduler";
+
+
+
+
+
+service SchedulerService {
+
+  // Upload/register a function
+  rpc RegisterFunction(RegisterFunctionRequest)
+      returns (RegisterFunctionResponse);
+
+  // Trigger execution (ASYNC)
+  rpc TriggerExecution(TriggerExecutionRequest)
+      returns (TriggerExecutionResponse);
+
+  // Query execution status (polling)
+  rpc GetExecutionStatus(GetExecutionStatusRequest)
+      returns (GetExecutionStatusResponse);
+}
+
+// ---------- Requests / Responses ----------
+
+message RegisterFunctionRequest {
+  string name = 1;
+  string language = 2; // "go"
+  bytes code = 3;
+}
+
+message RegisterFunctionResponse {
+  string function_id = 1;
+}
+
+message TriggerExecutionRequest {
+  string function_id = 1;
+  bytes payload = 2;
+}
+
+message TriggerExecutionResponse {
+  string execution_id = 1;
+  string status = 2; // ACCEPTED
+}
+
+message GetExecutionStatusRequest {
+  string execution_id = 1;
+}
+
+message GetExecutionStatusResponse {
+  string status = 1; // PENDING | RUNNING | COMPLETED | FAILED
+  bytes output = 2;
+  string error = 3;
+}

@@ -1,0 +1,32 @@
+  syntax = "proto3";
+
+  package common;
+
+option go_package = "taskforge/proto/common";
+
+
+
+
+
+  // Function metadata
+  message Function {
+    string function_id = 1;
+    string name = 2;
+    string language = 3; // "go" for v1
+    bytes code = 4;      // raw source code (v1)
+  }
+
+  // Execution request
+  message ExecutionRequest {
+    string execution_id = 1;
+    string function_id = 2;
+    bytes payload = 3;
+  }
+
+  // Execution result
+  message ExecutionResult {
+    string execution_id = 1;
+    bool success = 2;
+    bytes output = 3;
+    string error = 4;
+  }
