@@ -26,7 +26,7 @@ All of this is done using **Go, gRPC, goroutines, and event-driven design**.
 
 ## 🧱 High-Level Architecture (v1)
  
-![TaskForge v1 Architecture](./v1 architecture digram.png)
+![TaskForge v1 Architecture](./architecture_digrams/taskforge-v1-architecture.png)
 
 ### Core Components
 
